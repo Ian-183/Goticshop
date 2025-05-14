@@ -1,24 +1,25 @@
-const toggleBtn = document.getElementById('toggleBtn');
-const closeBtn = document.getElementById('closeBtn');
-const sideMenu = document.getElementById('sideMenu');
-const overlay = document.getElementById('overlay');
+const toggleBtn = document.getElementById("toggleBtn");
+const sideMenu = document.getElementById("sideMenu");
+const closeBtn = document.getElementById("closeBtn");
+const overlay = document.getElementById("overlay");
 
-toggleBtn.addEventListener('click', () => {
-  sideMenu.classList.add('active');
-  overlay.classList.add('active');
+toggleBtn.addEventListener("click", () => {
+  sideMenu.classList.add("active");
+  overlay.classList.add("active");
 });
 
-closeBtn.addEventListener('click', () => {
-  sideMenu.classList.remove('active');
-  overlay.classList.remove('active');
+closeBtn.addEventListener("click", () => {
+  sideMenu.classList.remove("active");
+  overlay.classList.remove("active");
 });
 
-overlay.addEventListener('click', () => {
-  sideMenu.classList.remove('active');
-  overlay.classList.remove('active');
+overlay.addEventListener("click", () => {
+  sideMenu.classList.remove("active");
+  overlay.classList.remove("active");
 });
+
 // 🖼️ Ruta del GIF de la araña (debe estar en la carpeta /imagenes/)
-  const gifSrc = "gifs/24Rx.gif";
+  const gifSrc = "gifs/araña.gif";
 
   // 🕷️ Función para crear una araña en un tramo específico (borde)
   function crearTramo(clase, delay) {

@@ -1,88 +1,99 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GOTICSHOP</title>
-    <link rel="stylesheet" href="estillos/estilopagprin.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GOTICSHOP</title>
+  <link rel="stylesheet" href="estillos/estilopagprin.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet"/>
 </head>
 <body>
 
-    <!-- Música de fondo -->
-    <audio autoplay loop>
-        <source src="musica/la canción de los memes con robert pattinson ｜ Vendredi sur Mer - Écoute chérie (Sub Español).mp3" type="audio/mpeg">
-        Tu navegador no soporta audio HTML5.
-    </audio>
+  <!-- Música de fondo -->
+  <audio autoplay loop>
+    <source src="musica/Sebastian Siverand - A Chance To Strike.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio HTML5.
+  </audio>
 
-    <!-- Video de fondo -->
-    <video autoplay muted loop class="video-bg">
-        <source src="https://cdn.pixabay.com/video/2021/08/31/87094-601076610_tiny.mp4" type="video/mp4">
-        Tu navegador no soporta video HTML5.
-    </video>
+  <!-- Video de fondo -->
+  <video autoplay muted loop class="video-bg">
+    <source src="https://cdn.pixabay.com/video/2021/08/31/87094-601076610_tiny.mp4" type="video/mp4">
+    Tu navegador no soporta video HTML5.
+  </video>
+  <!-- Capa de color (fondo transparente) -->
+        <div class="overlay-color"></div>
 
-    <!-- Encabezado con menú hamburguesa -->
-    <header>
-        <h1 class="logo">꧁ GOTICSHOP ꧂</h1>
-        <div class="menu-toggle" id="toggleBtn">&#9776;</div>
-    </header>
 
-    <!-- Menú lateral -->
-    <nav class="side-menu" id="sideMenu">
-        <div class="close-btn" id="closeBtn">&times;</div>
-        <ul>
-            <li><a href="colecionmujeres.html">MUJERES</a></li>
-            <li><a href="colecionniños.html">NIÑOS</a></li>
-            <li><a href="Accesorios.html">ACCESORIOS</a></li>
-            <li><a href="#">NOVEDADES</a></li>
-        </ul>
-    </nav>
-
-    <div class="overlay" id="overlay"></div>
-
-    <!-- Contenido principal -->
-    <div class="main-content">
-        <p class="tagline">—͟͞͞★ Tú lo imaginas, nosotros lo hacemos —͟͞͞★</p>
-        <div class="sections">
-            <div class="section">
-                <a href="colecionmujeres.html">
-                    <video autoplay muted loop playsinline>
-                        <source src="videos/coleccionmujeres.mp4" type="video/mp4">
-                        Tu navegador no soporta videos HTML5.
-                    </video>
-                    <ol>Colección</ol>
-                    <ol>Mujeres</ol>
-                </a>
-            </div>
-
-            <div class="section">
-                <a href="colecionniños.html">
-                    <video autoplay muted loop playsinline>
-                        <source src="videos/coleccionmujeres.mp4" type="video/mp4">
-                        Tu navegador no soporta videos HTML5.
-                    </video>
-                    <ol>Colección</ol>
-                    <ol>Niños</ol>
-                </a>
-            </div>
-
-            <div class="section">
-                <a href="Accesorios.html">
-                    <video autoplay muted loop playsinline>
-                        <source src="videos/coleccionmujeres.mp4" type="video/mp4">
-                        Tu navegador no soporta videos HTML5.
-                    </video>
-                    <ol>Accesorios</ol>
-                </a>
-            </div>
-        </div>
+  <!-- Encabezado -->
+  <header>
+    <div class="logo-container">
+      <img src="imagenes/cuervogood.png" alt="cuervologo GIF" class="cuervologo" />
+      <h1 class="logo">꧁ GOTICSHOP ꧂</h1>
+      <img src="gifs/murcielago.gif" alt="murciélago GIF" class="minimurcielago" />
     </div>
+    <img src="imagenes/cuervogood.png" alt="Abrir menú" class="menu-cuervo" id="toggleBtn" />
+  </header>
 
-    <footer>
-        <p>&copy; 2025 GOTICSHOP. Todos los derechos reservados.</p>
-    </footer>
+  <!-- Menú lateral -->
+  <nav class="side-menu" id="sideMenu">
+    <div class="close-btn" id="closeBtn">&times;</div>
+    <ul>
+      <li><a href="colecionmujeres.html">MUJERES</a></li>
+      <li><a href="colecionniños.html">NIÑOS</a></li>
+      <li><a href="Accesorios.html">ACCESORIOS</a></li>
+      <li><a href="#">NOVEDADES</a></li>
+      <li><a href="https://tulink.com">$</a></li>
+      <li><a href="https://tulink.com">$</a></li>
 
-    <script src="java/pagprin.js"></script>
+    </ul>
+  </nav>
+
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Contenido principal -->
+  <div class="main-content">
+    <p class="tagline">—͟͞͞★ Tú lo imaginas, nosotros lo hacemos —͟͞͞★</p>
+    <div class="sections">
+      <div class="section">
+        <a href="colecionmujeres.html">
+          <video autoplay muted loop playsinline>
+            <source src="videos/coleccionmujeres.mp4" type="video/mp4" />
+            Tu navegador no soporta videos HTML5.
+          </video>
+          <ol>Colección</ol>
+          <ol>Mujeres</ol>
+        </a>
+      </div>
+
+      <div class="section">
+        <a href="colecionniños.html">
+          <video autoplay muted loop playsinline>
+            <source src="videos/coleccionmujeres.mp4" type="video/mp4" />
+            Tu navegador no soporta videos HTML5.
+          </video>
+          <ol>Colección</ol>
+          <ol>Niños</ol>
+        </a>
+      </div>
+
+      <div class="section">
+        <a href="Accesorios.html">
+          <video autoplay muted loop playsinline>
+            <source src="videos/coleccionmujeres.mp4" type="video/mp4" />
+            Tu navegador no soporta videos HTML5.
+          </video>
+          <ol>Accesorios</ol>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2025 GOTICSHOP. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="java/pagprin.js"></script>
 </body>
 </html>
