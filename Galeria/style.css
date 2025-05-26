@@ -1,0 +1,272 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Fondo fijo sin bloquear scroll */
+html, body {
+  min-height: 100%;
+  height: auto;
+  font-family: 'Cinzel', serif;
+  color: white;
+  overflow-x: hidden; /* solo ocultamos horizontal, no vertical */
+}
+
+/* 🎥 Video de fondo */
+.fondobill {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -3;
+}
+
+/* Imagen PNG superpuesta */
+.batifondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* Capa oscura */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(139, 0, 0, 0.5);
+  z-index: -1;
+}
+
+/* Contenido principal */
+.main-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+
+/* Título */
+h1 {
+  font-size: 65px;
+  color: #f3f3f3;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+}
+
+/* Frase */
+p.tagline {
+  font-size: 20px;
+  margin-bottom: 50px;
+  font-weight: 500;
+  color: #ccc;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Galería de modelos */
+.modelos {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 50px 20px;
+}
+
+.modelo {
+  background-color: rgba(126, 2, 33, 0.6);
+  padding: 20px;
+  border-radius: 15px;
+  width: 300px;
+  transition: transform 0.4s, box-shadow 0.4s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+}
+
+.modelo:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+
+.modelo img {
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid #222;
+  transition: transform 0.3s;
+}
+
+.modelo:hover img {
+  transform: scale(1.02);
+}
+
+.modelo p {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #d3d3d3;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 50px;
+  }
+
+  p.tagline {
+    font-size: 16px;
+  }
+
+  .modelos {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos generales */
+body {
+  font-family: 'Cinzel', serif;
+  color: white;
+  background: black;
+  overflow-x: hidden;
+  overflow-y: auto; /* Activa la barra de desplazamiento vertical */
+  height: 100vh;
+}
+
+/* 🎥 Video, capa oscura e imagen de fondo */
+.fondobill, .overlay, .batifondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -3;
+}
+
+/* Orden de capas para fondo e imagen */
+.batifondo {
+  z-index: -2;
+}
+
+.overlay {
+  background-color: rgba(139, 0, 0, 0.521);
+  z-index: -1;
+}
+
+/* Contenido principal */
+.main-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 80px 20px;
+  padding-bottom: 150px;
+  min-height: 100vh; /* Garantiza espacio para scroll */
+}
+
+/* Título principal */
+h1 {
+  font-size: 65px;
+  color: #f3f3f3;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+}
+
+/* Frase */
+p.tagline {
+  font-size: 20px;
+  margin-bottom: 50px;
+  font-weight: 500;
+  color: #ccc;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Galería de modelos */
+.modelos {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 50px 20px;
+}
+
+.modelo {
+  background-color: rgba(126, 2, 33, 0.616);
+  padding: 20px;
+  border-radius: 15px;
+  width: 320px;
+  transition: transform 0.4s, box-shadow 0.4s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+}
+
+.modelo:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+
+.modelo img {
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid #222;
+  transition: transform 0.3s;
+}
+
+.modelo:hover img {
+  transform: scale(1.02);
+}
+
+.modelo p {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #d3d3d3;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 50px;
+  }
+
+  p.tagline {
+    font-size: 16px;
+  }
+
+  .modelos {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Personalización de la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(126, 2, 33, 0.8);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(126, 2, 33, 1);
+}

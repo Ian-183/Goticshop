@@ -1,0 +1,276 @@
+/* Reset general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fuente y fondo general */
+body {
+  font-family: 'Didact Gothic', 'Cormorant Garamond', serif;
+  background-color: #fdfdfd;
+  color: #000;
+  overflow-x: hidden;
+  position: relative;
+}
+.cuervologo {
+  width: 90px;    /* Tamaño ajustado */
+  height: auto;   /* Mantener proporción */
+  margin-right: 10px;  /* Espacio entre la imagen y el título */
+}
+
+
+/* Encabezado */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  border-bottom: 1px solid #cccccc;
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  color: rgb(255, 229, 229);
+  font-size: 2em;
+  font-weight: 700;
+  font-family: 'Cinzel', serif;
+  letter-spacing: 2px;
+}
+
+/* Botón cuervo para abrir menú */
+.menu-cuervo {
+  width: 60px;
+  height: auto;
+  cursor: pointer;
+}
+
+/* Menú lateral */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  transition: left 0.3s ease;
+  z-index: 1000;
+  padding-top: 60px;
+}
+
+.side-menu ul {
+  list-style: none;
+  padding-left: 20px;
+}
+
+.side-menu ul li {
+  margin: 20px 0;
+}
+
+.side-menu ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.2rem;
+}
+
+.side-menu.active {
+  left: 0;
+}
+
+/* Botón de cerrar menú */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Capa oscura detrás del menú */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.452);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 900;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Video de fondo */
+.video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -2;
+}
+/* Capa de color que cubre toda la pantalla */
+.overlay-color {
+  position: fixed;     /* Fija la capa sobre la pantalla */
+  top: 0;              /* Comienza desde la parte superior */
+  left: 0;             /* Comienza desde el borde izquierdo */
+  width: 100vw;        /* Cubre el ancho total de la pantalla */
+  height: 100vh;       /* Cubre el alto total de la pantalla */
+  background-color: rgba(255, 255, 255, 0.151);  /* Fondo oscuro con opacidad (ajusta los valores según prefieras) */
+  z-index: -1;         /* Asegura que esté detrás de todo el contenido */
+}
+
+
+/* Contenido principal */
+.main-content {
+  text-align: center;
+  padding: 40px 5%;
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+}
+
+.tagline {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* Secciones */
+.sections {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.section {
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.514);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.section:hover {
+  transform: scale(1.05);
+}
+
+.section video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Enlaces de secciones */
+.section a {
+  text-decoration: none;
+  color: #130000;
+  display: block;
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+/* Títulos tipo lista (estilo decorativo) */
+.section ol {
+  list-style: none;
+  font-family: 'Cinzel', serif;
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  border-top: 1px solid #ccc;
+  margin-top: 50px;
+  background: rgba(255, 255, 255, 0.8);
+  position: relative;
+  z-index: 1;
+}
+
+/* Estilo del logo con GIF */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.minimurcielago {
+  width: 60px;
+  height: auto;
+  pointer-events: none;
+}
+
+/* Araña animada */
+.spider {
+  position: absolute;
+  width: 150px;
+  height: auto;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.borde-inferior {
+  animation: moverDerecha 8s linear forwards;
+  bottom: 0;
+  left: -150px;
+  transform: scaleX(-1);
+}
+
+.borde-derecho {
+  animation: subirDerecha 8s linear forwards;
+  right: 0;
+  bottom: -150px;
+  transform: rotate(270deg) scaleX(-1);
+}
+
+.borde-superior {
+  animation: moverIzquierda 8s linear forwards;
+  top: 0;
+  left: 100vw;
+  transform: rotate(180deg) scaleX(-1);
+}
+
+.borde-izquierdo {
+  animation: bajarIzquierda 8s linear forwards;
+  left: 0;
+  top: -150px;
+  transform: rotate(90deg) scaleX(-1);
+}
+
+@keyframes moverDerecha {
+  from { left: -150px; }
+  to { left: 100vw; }
+}
+
+@keyframes subirDerecha {
+  from { bottom: -150px; }
+  to { bottom: 100vh; }
+}
+
+@keyframes moverIzquierda {
+  from { left: 100vw; }
+  to { left: -150px; }
+}
+
+@keyframes bajarIzquierda {
+  from { top: -150px; }
+  to { top: 100vh; }
+}
